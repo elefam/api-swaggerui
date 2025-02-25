@@ -11,7 +11,12 @@ export interface Config {
         oauthDomain: string;
     };
     apiGateway: {
-        restApiId: string;
+        apis: {
+            id: string;
+            name: string;
+            description: string;
+            createdDate: string;
+        }[];
         stageName: string;
     };
 }

@@ -3,5 +3,7 @@ node_modules
 .serverless
 build
 dist
+*.js
+*.js.map
 
 src/config.json

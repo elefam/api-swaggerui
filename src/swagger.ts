@@ -21,7 +21,7 @@ const createAPIGatewayClient = (credentials: ICredentials): APIGateway => new AP
 
 const getAPIGatewaySpec = async (apiGateway: APIGateway): Promise<Spec> => {
     const data = await apiGateway.getExport({
-        restApiId: config.apiGateway.restApiId,
+        restApiId: config.apiGateway.apis[0].id,
         stageName: config.apiGateway.stageName,
         exportType: 'oas30',
         accepts: 'application/json',

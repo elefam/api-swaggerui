@@ -8,7 +8,7 @@ plugins:
 
 custom:
   # change the project and/or service name to have unique baseName, that is used as a Cognito auth domain
-  project: betterdev
+  project: elefam
   baseName: ${self:custom.project}-${self:provider.stage}-${self:service}
 
   scriptHooks:
@@ -223,7 +223,7 @@ resources:
               Statement:
                 - Effect: Allow
                   Action: apigateway:GET
-                  Resource: "arn:aws:apigateway:#{AWS::Region}::/restapis/#{ApiGatewayRestApi}/stages/${self:provider.stage}/exports/*"
+                  Resource: "arn:aws:apigateway:#{AWS::Region}::/restapis/*/stages/${self:provider.stage}/exports/*"
 
   # save bucket name in outputs so it can be found when removing the service
   Outputs:
